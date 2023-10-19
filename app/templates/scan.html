@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ワンピース - {{ folder }}</title>
+</head>
+<body>
+    <h1>{{ folder }}</h1>
+    <div>
+        {% for image in images %}
+            <img src="{{ url_for('static', filename='scans/' + folder + '/' + image) }}" alt="{{ image }}">
+        {% endfor %}
+    </div>
+</body>
+</html>
