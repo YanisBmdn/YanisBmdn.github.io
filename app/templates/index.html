@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>ワンピース - Fan Translation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/mon_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 </head>
 <body>
-
-    <h1>ようこそ</h1>
+    <h1 class="title">ようこそ</h1>
 
     <div>
-        <ul>
+        <div class="container">
             {% for folder in folders %}
-                <li><a href="{{ url_for('show_images', folder=folder) }}">{{ folder }}</a></li>
+                <a href="{{ url_for('show_images', folder=folder) }}">{{ folder }}</a>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 
 </body>
