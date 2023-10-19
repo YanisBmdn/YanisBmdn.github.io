@@ -1,1 +1,20 @@
-Hello world
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ワンピース - Fan Translation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <h1 class="title">ようこそ</h1>
+
+    <div>
+        <div class="container">
+            {% for folder in folders %}
+                <a href="{{ url_for('show_images', folder=folder) }}">{{ folder }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

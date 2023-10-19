@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ワンピース - {{ folder }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <h1 class="title">Chapitre {{ folder }}</h1>
+    <div class="flex-container">
+        {% for image in images %}
+        <div class="flex-item">
+            <img src="{{ url_for('static', filename='scans/' ~ folder ~ '/' ~ image) }}" alt="{{ image }}">
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
